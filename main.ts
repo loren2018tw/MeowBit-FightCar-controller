@@ -1,3 +1,9 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    sdwireless.sdw_mbit_send_string("A")
+})
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    sdwireless.sdw_mbit_send_string("B")
+})
 let 新命令 = ""
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -30,10 +36,6 @@ forever(function () {
         新命令 = "L"
     } else if (controller.right.isPressed()) {
         新命令 = "R"
-    } else if (controller.A.isPressed()) {
-        新命令 = "A"
-    } else if (controller.B.isPressed()) {
-        新命令 = "B"
     } else {
         新命令 = "STOP"
     }
