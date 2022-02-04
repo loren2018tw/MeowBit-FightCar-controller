@@ -29,15 +29,15 @@ sdwireless.sdw_set_radiogp(7)
 let 上一個命令 = ""
 forever(function () {
     if (controller.up.isPressed()) {
-        新命令 = "F"
+        新命令 = "前進"
     } else if (controller.down.isPressed()) {
-        新命令 = "BO"
+        新命令 = "後退"
     } else if (controller.left.isPressed()) {
-        新命令 = "L"
+        新命令 = "左轉"
     } else if (controller.right.isPressed()) {
-        新命令 = "R"
+        新命令 = "右轉"
     } else {
-        新命令 = "STOP"
+        新命令 = "停止"
     }
     if (新命令 != 上一個命令) {
         上一個命令 = 新命令
